@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+    robot-framework:
+        image: ppodgorsek/robot-framework
+        volumes:
+            - ./tests:/opt/robotframework/tests
+            - ./reports:/opt/robotframework/reports
+            - ./resources:/opt/robotframework/resources
+            - ./keywords:/opt/robotframework/keywords
+        environment:
+            - ROBOT_TESTS=/opt/robotframework/tests
+            - ROBOT_OPTIONS=--outputdir /opt/robotframework/reports
