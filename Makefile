@@ -14,3 +14,6 @@ clean:
 
 test:
 	docker-compose exec robot robot /tests
+
+robot:
+	robot --outputdir reports .

@@ -8,6 +8,7 @@ services:
             - ./reports:/opt/robotframework/reports
             - ./resources:/opt/robotframework/resources
             - ./keywords:/opt/robotframework/keywords
+            - ./requirements.txt:/opt/robotframework/pip-requirements.txt:Z
         environment:
             - ROBOT_TESTS=/opt/robotframework/tests
             - ROBOT_OPTIONS=--outputdir /opt/robotframework/reports
